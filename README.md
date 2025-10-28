@@ -24,3 +24,10 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo snap set certbot trust-plugin-with-root=ok
 sudo certbot certonly --manual --preferred-challenges dns -d example.com -d *.example.com
 ```
+
+
+## Markdown to PDF
+```bash
+pandoc your_file.md -o output.pdf --pdf-engine=wkhtmltopdf --toc --number-sections --pdf-engine-opt=--grayscale --pdf-engine-opt=--footer-right --pdf-engine-opt="[page]"
+
+```
