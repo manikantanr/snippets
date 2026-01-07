@@ -31,3 +31,9 @@ sudo certbot certonly --manual --preferred-challenges dns -d example.com -d *.ex
 pandoc your_file.md -o output.pdf --pdf-engine=wkhtmltopdf --toc --number-sections --pdf-engine-opt=--grayscale --pdf-engine-opt=--footer-right --pdf-engine-opt="[page]"
 
 ```
+
+## Download youtube video
+- Requires `deno` binary in path for best performance
+```bash
+yt-dlp --cookies-from-browser firefox -f "bestvideo+bestaudio/best" --merge-output-format mp4 "<url>"
+```
