@@ -30,6 +30,14 @@ sudo certbot certonly --manual --preferred-challenges dns -d example.com -d *.ex
 ```bash
 pandoc your_file.md -o output.pdf --pdf-engine=wkhtmltopdf --toc --number-sections --pdf-engine-opt=--grayscale --pdf-engine-opt=--footer-right --pdf-engine-opt="[page]"
 
+pandoc input.md -o output.md.pdf \
+  --toc \
+  --toc-depth=3 \
+  -V geometry:"top=1.5cm, bottom=1.5cm, right=1.5cm, left=2.5cm" \
+  -V pagestyle=plain \
+  --pdf-engine=xelatex
+
+
 ```
 
 ## Download youtube video
