@@ -23,6 +23,8 @@ sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo snap set certbot trust-plugin-with-root=ok
 sudo certbot certonly --manual --preferred-challenges dns -d example.com -d *.example.com
+#https://github.com/svenstaro/miniserve
+miniserve.exe -u -p 8000 C:\Path\To\Your\Uploads
 ```
 
 
