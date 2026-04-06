@@ -39,6 +39,16 @@ pandoc input.md -o output.md.pdf \
   -V pagestyle=plain \
   --pdf-engine=xelatex
 
+ pandoc input.md -o ouput.pdf \
+  --toc \
+  --toc-depth=3 \
+  -V geometry:"top=1.5cm, bottom=1.5cm, right=1.5cm, left=2.5cm" \
+  -V pagestyle=plain \
+  --pdf-engine=xelatex \
+  -V mainfont="Helvetica Neue" \
+  -V monofont="Menlo"
+
+
 
 ```
 
